@@ -4,9 +4,9 @@
 class DinoCli < Formula
   desc "Command-line client and daemon for the dino terminal"
   homepage "https://meetdino.com/"
-  url "https://github.com/asdf9384/dino-releases/releases/download/v0.1.0/dino-0.1.0-darwin-arm64.tar.gz"
-  version "0.1.0"
-  sha256 "a272b7f065a4439e052e4821d11985fccb5c982ba48ad3592ca04f335c853842"
+  url "https://github.com/asdf9384/dino-releases/releases/download/v0.1.1/dino-0.1.1-darwin-arm64.tar.gz"
+  version "0.1.1"
+  sha256 "abbfa260e6a95609c50e254863e8e0a1258efbaa532adec555dd4ea242692aad"
   license "MIT"
 
   livecheck do
