@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 cask "dino" do
-  version "0.1.3"
-  sha256 "2225710120c45628e81e24d664edf2b8f7d9712a22063959a39b74513ab62112"
+  version "0.1.4"
+  sha256 "655951844349728f3f9aca610d3b13f1b3a035f8750e3f61f5ecfcd3a64bb557"
 
   url "https://github.com/asdf9384/dino-releases/releases/download/v#{version}/Dino-#{version}-arm64.dmg",
       verified: "github.com/asdf9384/dino-releases/"
