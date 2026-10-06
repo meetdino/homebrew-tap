@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 cask "dino" do
-  version "0.1.5"
-  sha256 "64ffb3c88e042112a62098c4b69f3f82abc621a89c52ce608fdd7587369ef9a0"
+  version "0.1.6"
+  sha256 "0c7863a7c3cdd78e41017447894e817635088a8f5d33f6cd9ba9ae7d36cb9302"
 
   url "https://github.com/meetdino/dino/releases/download/v#{version}/Dino-#{version}-arm64.dmg"
   name "dino"
@@ -19,8 +19,9 @@ cask "dino" do
   app "Dino.app"
   binary "#{appdir}/Dino.app/Contents/Helpers/dino"
 
-  # dinod's launch agents: the app's (SMAppService; it goes with the app) and the CLI's.
-  zap launchctl: ["dev.dino.app.dinod", "dev.dino.app.dinod-cli"],
+  # dinod's launch agents: the app's (SMAppService: dinod-host since 0.1.6, dinod before it) and
+  # the CLI's.
+  zap launchctl: ["dev.dino.app.dinod-host", "dev.dino.app.dinod", "dev.dino.app.dinod-cli"],
       trash:     [
     "~/.config/dino",
     "~/Library/LaunchAgents/dev.dino.app.dinod-cli.plist",
