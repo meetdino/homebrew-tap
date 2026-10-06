@@ -4,8 +4,8 @@ cask "dino" do
   version "0.1.5"
   sha256 "64ffb3c88e042112a62098c4b69f3f82abc621a89c52ce608fdd7587369ef9a0"
 
-  url "https://github.com/asdf9384/dino-releases/releases/download/v#{version}/Dino-#{version}-arm64.dmg",
-      verified: "github.com/asdf9384/dino-releases/"
+  url "https://github.com/meetdino/dino/releases/download/v#{version}/Dino-#{version}-arm64.dmg",
+      verified: "github.com/meetdino/dino/"
   name "dino"
   desc "Terminal for the agent era, on Ghostty's core"
   homepage "https://meetdino.com/"
