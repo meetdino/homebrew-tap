@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 cask "dino" do
-  version "0.1.6"
-  sha256 "0c7863a7c3cdd78e41017447894e817635088a8f5d33f6cd9ba9ae7d36cb9302"
+  version "0.1.7"
+  sha256 "17da58f8ed9e74f4f777eed18b97ccae29c836e8886d52774fc457541ae1e076"
 
   url "https://github.com/meetdino/dino/releases/download/v#{version}/Dino-#{version}-arm64.dmg"
   name "dino"
@@ -14,6 +14,7 @@ cask "dino" do
     strategy :github_latest
   end
 
+  depends_on arch: :arm64
   depends_on macos: :sonoma
 
   app "Dino.app"

@@ -4,9 +4,9 @@
 class DinoCli < Formula
   desc "Command-line client and daemon for the dino terminal"
   homepage "https://meetdino.com/"
-  url "https://github.com/meetdino/dino/releases/download/v0.1.6/dino-0.1.6-darwin-arm64.tar.gz"
-  version "0.1.6"
-  sha256 "3576c69473dd9e0945c70df455058216e2029aadcbdc181a116c840f073186e0"
+  url "https://github.com/meetdino/dino/releases/download/v0.1.7/dino-0.1.7-darwin-arm64.tar.gz"
+  version "0.1.7"
+  sha256 "1ad26c10fbaccdda76c56d5fd22be44c30855c1d5dbe7b3b7fca258c6689baed"
   license "MIT"
 
   livecheck do
@@ -14,6 +14,7 @@ class DinoCli < Formula
     strategy :github_latest
   end
 
+  depends_on arch: :arm64
   depends_on :macos
 
   conflicts_with cask: "dino", because: "the dino app includes the dino command"
