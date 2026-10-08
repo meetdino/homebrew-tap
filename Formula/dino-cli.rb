@@ -4,9 +4,9 @@
 class DinoCli < Formula
   desc "Command-line client and daemon for the dino terminal"
   homepage "https://meetdino.com/"
-  url "https://github.com/meetdino/dino/releases/download/v0.1.9/dino-0.1.9-darwin-arm64.tar.gz"
-  version "0.1.9"
-  sha256 "e752694e1328d60f325c359ed701119e4f3547fee2893eeb1be3365e68b7f3e0"
+  url "https://github.com/meetdino/dino/releases/download/v0.1.10/dino-0.1.10-darwin-arm64.tar.gz"
+  version "0.1.10"
+  sha256 "812f28dd03db677b2fb4b3014ed8bbd55aa4c97357e0c8cd34a542bd05240f53"
   license "MIT"
 
   livecheck do
@@ -21,6 +21,10 @@ class DinoCli < Formula
 
   def install
     bin.install "dino"
+    # The licenses of the code in it, beside LICENSE (which Homebrew keeps on its own).
+    prefix.install "THIRD_PARTY_NOTICES.md"
+    # Tab completion, in the folders bash, zsh and fish load completions from.
+    generate_completions_from_executable(bin/"dino", "completions")
   end
 
   test do
